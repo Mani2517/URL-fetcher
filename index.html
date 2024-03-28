@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Fetcher</title>
+    <style>
+        button{
+            text-align: center;
+            padding: auto;
+            align-self: center;
+        }
+        p{
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+        .fet{
+            align-items: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="fet">
+    <script>
+        // JavaScript code goes here
+         function main() {
+            let url = prompt("Enter the URL: ");
+            let url1 = "https://" + url;
+            try {
+                let response = fetch(url1);
+                console.log("Response code:", response.status);
+                window.open(url1, '_blank');
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        }
+        main();
+        </script>
+        <p>To  Re-Enter  the URL !  Click here : </p>
+        <button onclick="main()" type="submit">submit</button>
+    </div>
+</body>
+</html>
+
+
